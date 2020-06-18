@@ -11,6 +11,8 @@
 
 ## Cloud-init
 
+- [user_data.yaml] deployed with the catalog(https://github.com/f5craigsca/ibmcloud-vpc-gen2-1-nic-standalone-tile/user_data.yaml)
+
 ## Network Configurations
 ### Single-NIC
 - Document: [Deploy a single-NIC configuration through the IBM Catalog](DeployCatalog.md)
