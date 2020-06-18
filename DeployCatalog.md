@@ -29,6 +29,9 @@ All access to the BIG-IP VE appliance is through the same IP address and virtual
 _Deployment variables without defaults_
 ![](/images/no_default.png)
 
+_Deployment variables with defaults_
+![](/images/default.png)
+
 | Key | Default | Definition |
 | --- | ------- | ---------- |
 | `region` | null | The VPC Zone that you want your VPC virtual servers to be provisioned. To list available zones, run `ibmcloud is regions`.  Currently BIG-IP is supported in the us-east, us-south, eu-gb and eu-de zones. |
