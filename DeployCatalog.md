@@ -25,7 +25,10 @@ All access to the BIG-IP VE appliance is through the same IP address and virtual
 2. Search for "F5" in the search bar.  
 3. Click on the "F5 BIG-IP Virtual Edition for VPC Gen 2 - 1-NIC" tile.
 4. Set the deployment values (note that there are two sections of variables, one for those with default values and one for those without)
-![Deployment Values with no default - required](/images/no_default.png)
+
+* Deployment variables without defaults *
+![](/images/no_default.png)
+
 | Key | Default | Definition |
 | --- | ------- | ---------- |
 | `region` | null | The VPC Zone that you want your VPC virtual servers to be provisioned. To list available zones, run `ibmcloud is regions`.  Currently BIG-IP is supported in the us-east, us-south, eu-gb and eu-de zones. |
