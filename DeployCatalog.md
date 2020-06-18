@@ -1,5 +1,7 @@
 # Deploy F5 BIG-IP Virtual Edition on IBM Public Cloud via IBM Catalog
 
+<img src="/images/overview.png" width="300" height="300"/>
+
 In this configuration, traffic is flowing through BIG-IP VE to application servers. The BIG-IP virtual server is listening for traffic destined for port 443. Port 8443 is for management traffic.
 
 All access to the BIG-IP VE appliance is through the same IP address and virtual network interface (vNIC). This single NIC deployment has the following benefits:
