@@ -1,8 +1,8 @@
 # Deploy F5 BIG-IP Virtual Edition on IBM Public Cloud via IBM Catalog
 
-The following diagram shows a basic single NIC deployment of BIG-IP VE in an IBM Virtual Private Cloud Next Gen 2. Traffic is flowing through BIG-IP VE to application servers. The BIG-IP virtual server is listening for traffic destined for port 443. Port 8443 is for management traffic.
+In this configuration, traffic is flowing through BIG-IP VE to application servers. The BIG-IP virtual server is listening for traffic destined for port 443. Port 8443 is for management traffic.
 
-In this configuration, all access to the BIG-IP VE appliance is through the same IP address and virtual network interface (vNIC). This single NIC deployment has the following benefits:
+All access to the BIG-IP VE appliance is through the same IP address and virtual network interface (vNIC). This single NIC deployment has the following benefits:
 
 - BIG-IP VE creates networking objects (a management VLAN, and an internal self IP address, security groups and floating IP).
 - The BIG-IP VE sets the Configuration utility port to 8443 (instead of 443).
@@ -25,6 +25,7 @@ In this configuration, all access to the BIG-IP VE appliance is through the same
 2. Search for "F5" in the search bar.  
 3. Click on the "F5 BIG-IP Virtual Edition for VPC Gen 2" tile.
 4. Set the deployment values (note that there are two sections of variables, one for those with default values and one for those without)
+
 | Key | Default | Definition |
 | --- | ------- | ---------- |
 | `region` | null | The VPC Zone that you want your VPC virtual servers to be provisioned. To list available zones, run `ibmcloud is regions`.  Currently BIG-IP is supported in the us-east, us-south, eu-gb and eu-de zones. |
@@ -35,4 +36,5 @@ In this configuration, all access to the BIG-IP VE appliance is through the same
 | `tmos_license_basekey` | null | The registration key to be used to license the BIG-IP.  Leave blank if you wish to license the BIG-IP later. |
 | `tmos_admin_password` | null | The password to be used for the admin account on the BIG-IP GUI.  If left blank, this will generate a random, 32 byte password. |
 | `subnet_id` | null | The ID of the subnet where the BIG-IP interface will be deployed. Click on the subnet details in the VPC Subnet Listing to determine this value. | 
+
 5. Once these values are set, click the checkbox for accepting the license agreement, and then choose "Install".  You will then be taken to the Schematics / Workspace page where you can "View log" to see how the deployment is progressing.
