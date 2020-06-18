@@ -30,7 +30,7 @@ _Deployment variables without defaults_
 ![](/images/no_default.png)
 
 _Deployment variables with defaults_
-![](/images/default.png)
+![](/images/default.PNG)
 
 | Key | Default | Definition |
 | --- | ------- | ---------- |
