@@ -3,9 +3,9 @@
 
 ## Get Started
 
-- Document
 - Video: Deploy Manually
-- Github: Terraform Template
+- Github: [Terraform Template](https://github.com/jgruberf5/ibmcloud-vpc-gen2-tmos-1-nic-standalone)
+- Github: [Terraform IBM Catalog Template](https://github.com/f5craigsca/ibmcloud-vpc-gen2-1-nic-standalone-tile)
 
 ## System configurations
 
@@ -13,7 +13,7 @@
 
 ## Network Configurations
 ### Single-NIC
-- Document: Deploy a single-NIC configuration through the IBM Catalog
+- Document: [Deploy a single-NIC configuration through the IBM Catalog](DeployCatalog.md)
 - Document: Deploy a single-NIC configuration through the IBM GUI
 
 ## More Help with BIG-IP
