@@ -23,6 +23,9 @@ All access to the BIG-IP VE appliance is through the same IP address and virtual
 
 1. Login to your IBM Cloud Account and Navigate to the IBM Catalog.
 2. Search for "F5" in the search bar.  
+
+![](/images/f5_tile.png)
+
 3. Click on the "F5 BIG-IP Virtual Edition for VPC Gen 2 - 1-NIC" tile.
 4. Set the deployment values (note that there are two sections of variables, one for those with default values and one for those without)
 
