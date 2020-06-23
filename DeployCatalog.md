@@ -52,7 +52,7 @@ _Deployment variables with defaults_
 | `instance_profile` | cx2-2x4 | The profile of compute CPU and memory resources to be used when provisioning the BIG-IP instance. To list available profiles, run `ibmcloud is instance-profiles`.  See below for recommended profiles. |
 | `tmos_license_basekey` | null | The registration key to be used to license the BIG-IP.  Leave blank if you wish to license the BIG-IP later. |
 
-_Compute Profiles_
+_Instance Profiles_
 | Profile Name | Throughput Max (per IBM) | Recommendations |
 | ------------ | ------------------------ | --------------- |
 | `cx2-2x4` | 4 Gbps | Ideal for Good or LTM license up to 1 Gbps (note that startup times may be extended due to memory utilization) |
