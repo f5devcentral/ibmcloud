@@ -17,6 +17,10 @@ All access to the BIG-IP VE appliance is through the same IP address and virtual
 ## Prerequisites:
 - Must have access to a VPC in IBM VPC Gen 2.
 - Must have one subnet configured to deploy the BIG-IP.  This subnet will be used for both management and data traffic.
+- Ensure that you have the following permissions in IBM Cloud Identity and Access Management:
+    * `Manager` service access role for IBM Cloud Schematics
+    * `Operator` platform role for VPC Infrastructure
+- An ssh key, to ssh into your instance after deployment.
 
 ## Notes
 - The resource group used by the tile when creating resources will use the same one attributed to the original subnet.  For example, if the subnet you specify to deploy on belongs in the "default" resource group, the BIG-IP, security groups and floating IP will belong to the "default" as well.
@@ -48,4 +52,14 @@ _Deployment variables with defaults_
 | `instance_profile` | cx2-2x4 | The profile of compute CPU and memory resources to be used when provisioning the BIG-IP instance. To list available profiles, run `ibmcloud is instance-profiles`.  See below for recommended profiles. |
 | `tmos_license_basekey` | null | The registration key to be used to license the BIG-IP.  Leave blank if you wish to license the BIG-IP later. |
 
+_Compute Profiles_
+| Profile Name | Throughput Max (per IBM) | Recommendations |
+| ------------ | ------------------------ | --------------- |
+| `cx2-2x4` | 4 Gbps | Ideal for Good or LTM license up to 1 Gbps (note that startup times may be extended due to memory utilization) |
+| `cx2-4x8` | 8 Gbps | Ideal for Better, WAF and AWAF license up to 1 Gbps |
+| `cx2-8x16` | 16 Gbps | Ideal for Best license up to 10 Gbps or Good/Better/WAF/AWAF throughputs above 1 Gbps |
+| `cx2-16x32` | 64 GBps | Ideal for performance requiring 8 cores or more |
+
 5. Once these values are set, click the checkbox for accepting the license agreement, and then choose "Install".  You will then be taken to the Schematics / Workspace page where you can "View log" to see how the deployment is progressing.
+
+6. This process will take about 10 minutes to complete.  Note, however, that the instance will be shown as available on the IBM Cloud before the process ends.  This is because F5 TMOS is still booting itself.  Within a few minutes you will be able to access the GUI or ssh into the instance.
