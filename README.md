@@ -11,7 +11,7 @@
 
 ## Cloud-init
 
-- Github: [user_data.yaml] deployed with the catalog(https://github.com/f5craigsca/ibmcloud-vpc-gen2-1-nic-standalone-tile/blob/master/user_data.yaml
+- Github: [user_data.yaml](https://github.com/f5craigsca/ibmcloud-vpc-gen2-1-nic-standalone-tile/blob/master/user_data.yaml
 
 ## Network Configurations
 ### Single-NIC
